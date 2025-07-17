@@ -2,12 +2,12 @@
 <html>
 <head>
   <title>Send Email</title>
-  <!-- Load EmailJS SDK -->
+
   <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
 
   <script>
     (function() {
-      // ✅ Your actual EmailJS Public Key
+     
       emailjs.init("b1_w0QWSH_7eHL6o7");
     })();
   </script>
@@ -45,7 +45,7 @@
 </head>
 <body>
 
-  <h2 style="text-align:center;">📩 Contact Form</h2>
+  <h2 style="text-align:center;"> Contact Form</h2>
 
   <form id="emailForm">
     <input type="text" name="from_name" placeholder="Your Name" required><br>
@@ -58,13 +58,13 @@
     document.getElementById('emailForm').addEventListener('submit', function(e) {
       e.preventDefault();
 
-      // ✅ Your actual Service ID & Template ID
+      
       emailjs.sendForm('service_opeplsa', 'template_6sfixls', this)
         .then(() => {
-          alert('✅ Email sent successfully!');
+          alert('Email sent successfully!');
           this.reset();
         }, (err) => {
-          alert('❌ Failed to send email: ' + JSON.stringify(err));
+          alert(' Failed to send email: ' + JSON.stringify(err));
         });
     });
   </script>
